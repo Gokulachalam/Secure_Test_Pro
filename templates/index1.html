@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureTest Pro</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input {
+            padding: 8px;
+            margin: 8px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #webcamContainer {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #webcam {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #startButton {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        #startButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>SecureTest Pro</h1>
+        <form id="loginForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" required>
+            
+            <label for="rollNo">Roll No:</label>
+            <input type="text" id="rollNo" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+
+        <div id="webcamContainer">
+            <video id="webcam" autoplay></video>
+            <button id="startButton" onclick="startWebcam()">Start</button>
+        </div>
+    </div>
+
+    <script>
+        let videoStream; // Global variable to store the video stream
+
+        async function login() {
+            // You can add authentication logic here
+            // For simplicity, I'm considering a successful login for any input
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("webcamContainer").style.display = "block";
+
+            // Start the webcam feed
+            const video = document.getElementById("webcam");
+            videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
+            video.srcObject = videoStream;
+        }
+
+        function startWebcam() {
+            // Make sure the video stream is defined before trying to stop it
+            if (videoStream) {
+                videoStream.getTracks().forEach(track => track.stop());
+            }
+
+            // Make an asynchronous request to the Flask server to start the webcam feed
+            const video = document.getElementById("webcam");
+            video.src = "/video_feed";
+        }
+    </script>
+</body>
+</html>
