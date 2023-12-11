@@ -74,14 +74,6 @@ SecureTestPro/
 
 
 
-## Images
-
-![Image 1](https://example.com/image1.png)
-![Image 2](https://example.com/image2.png)
-![Image 3](https://example.com/image3.png)
-![Image 4](https://example.com/image4.png)
-
-
 
 
 ## Note
