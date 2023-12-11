@@ -71,6 +71,66 @@ SecureTestPro/
 - OpenCV
 - Flask-CORS
 
+- 
+
+## Login
+![Screenshot from 2023-12-10 20-31-38](https://github.com/Gokulachalam/Secure_Test_Pro/assets/89055461/7e1b252f-c4ec-4616-8a3e-9538e8597906)
+
+
+
+
+
+
+
+
+
+
+
+
+## Detection
+![Screenshot from 2023-12-10 20-31-51](https://github.com/Gokulachalam/Secure_Test_Pro/assets/89055461/b6e42b1f-626b-40a5-8d8d-74f464309357)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Warning
+![Screenshot from 2023-12-10 20-33-18](https://github.com/Gokulachalam/Secure_Test_Pro/assets/89055461/a0791ffa-da1b-4ce7-aaa3-e7cadfdeb1bf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
