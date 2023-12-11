@@ -12,6 +12,8 @@ SecureTest Pro is a Flask application that combines face and eye detection to en
 
 
 
+
+
 SecureTestPro/
 │
 ├── static/
@@ -26,6 +28,9 @@ SecureTestPro/
 ├── your_app_name.py
 │
 └── README.md
+
+
+
 
 
 
