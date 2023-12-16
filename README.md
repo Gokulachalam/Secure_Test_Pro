@@ -2,6 +2,15 @@
 
 SecureTest Pro is a Flask application that combines face and eye detection to enhance the security of an online test-taking environment. It captures the webcam feed, analyzes facial features, and issues warnings based on detected movements. The application also takes a screenshot when a certain threshold of warnings is reached.
 
+
+## Demo
+
+
+## Development Environment
+
+This project is developed and tested on a Debian 12 Linux platform
+
+
 ## Features
 
 - **Webcam Integration:** Utilizes the user's webcam to capture live video feed.
